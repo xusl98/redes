@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'redes';
+  isCollapsed: boolean = false;
+  visible: string = '';
+
+
+
+  select(tema: string): void{
+  this.visible = tema;
+  }
 }
+
