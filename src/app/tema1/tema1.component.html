@@ -1,5 +1,5 @@
 <div class="container-fluid">
-    <h2>Tema 1</h2>
+    <h2>Tema 1 - Introducción</h2>
     <h3>1.1 Transmisión de datos</h3>
     <div>Transmisión de datos es el intercambio de datos entre dos dispositivos a través de algún medio de transmisión.
     </div>
@@ -81,7 +81,7 @@
                             Ventajas
                             <ul>
                                 <li>Fácil de instalar y configurar</li>
-                                <li>MenosCable</li>
+                                <li>Menos Cable</li>
                                 <li>Robustez, la desconexión de un cable solo afecta a un dispositivo</li>
                                 <li>Fácil de identificar los fallos</li>
                             </ul>
@@ -95,9 +95,81 @@
                         </li>
                     </ul>
                 </li>
+                <li>
+                    Topología de Bus: Es multipunto al contrario que las anteriores. Un cable largo actúa como una red troncal que conecta todos los dispositivos en la red 
+                    <br>
+                    Los nodos se conectan al bus mediantes cables de conexión o latiguillos
+                    <ul>
+                        <li>
+                            Ventajas
+                            <ul>
+                                <li>Sencillez de instalación</li>
+                                <li>El cable troncal puede extenderse por el camino más eficiente</li>
+                                <li>Menos cable requerido que las anteriores</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Desventajas
+                            <ul>
+                                <li>Difícil reconexión y aislamiento de fallos</li>
+                                <li>Difícil añadir nuevos dispositivos</li>
+                                <li>Un fallo en el bus interrumpe todas las transmisiones</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    Topología en Anillo: Cada dispositivo tiene una línea de conexión dedicada y punto a punto solamente con dos dispositivos que están a sus lados.
+                    <br>
+                    La señal pasa a lo largo del anillo en una direciión, o de dispositivo a dispositivo hasta que alcanza su destino
+                    <ul>
+                        <li>
+                            Ventajas
+                            <ul>
+                                <li>Relativamente fácil de instalar y reconfigurar</li>
+                                <li>Fácil de aislar los fallos</li>
+                                <li>Menos cable requerido que las anteriores</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Desventajas
+                            <ul>
+                                <li>Una rotura del anillo puede inhabilitar toda la red</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
             </ol>
         </li>
     </ul>
-
-
+    <h3>1.3 Tipos de Redes</h3>
+    <h4>1.3.1 Red de área local (LAN)</h4>
+    <div>
+        Una red de área local suele ser una red de propiedad privada. Cada host tiene un idedntificador, que lo define de manera única. Las redes lan utilizan un conmutador 
+        que reconoce la dirección de destino del paquete y lo guía
+    </div>
+    <h4>1.3.2 Red de área amplia (WAN)</h4>
+    <div>
+        Es también una interconexión de dispositivos capaces de comunicación, sin embargo se diferencia de la lan en que la wan tien unn alcance geográfico mucho más amplio
+    </div>
+    <ul>
+        <li>Wan punto a punto</li>
+        <li>Wan conmutada: Las más usadas actualmente</li>
+        <li>Inerred o internet: Dos o más redes conectadas entre sí</li>
+    </ul>
+    <h4>1.3.4 Acceso a internet</h4>
+    <ul>
+        <li>
+            Redes telefónicas: usado por residencias y pequeñas empresas
+            <ul>
+                <li>Servicio de marcación: Módem en la línea telefónica, no permite comunicación telefónica y uso de internet simultáneamente</li>
+                <li>DSL: Mayor velocidad de internet y permite uso simultáneo de tlf e internet</li>
+            </ul>
+        </li>
+        <li>Cables de red: Mayor velocidad pero depende del número de usuarios que utilicen el mismo cable</li>
+        <li>Redes inalámbricas</li>
+        <li>Conexión directa a internet: Una gran organización puede convertirse en un proveedor ed servicios de internet local si arrienda una wan de alta velocidad 
+            y se conecta a un ISP regional
+        </li>
+    </ul>
 </div>

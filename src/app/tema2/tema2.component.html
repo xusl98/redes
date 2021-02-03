@@ -1,1 +1,43 @@
-<p>tema2 works!</p>
+<div class="container-fluid">
+    <h2>Tema 2 - Modelos de Red</h2>
+    <h3>2.1 Arquitectura por niveles</h3>
+    <h4>2.1.1 Principios de la arquitectura por niveles</h4>
+    <ul>
+        <li>Primer principio: Si se quiere una comunicación bidireccional, cada nivel debe ser capaz de realizar tareas opuestas, una en cada sentido</li>
+        <li>Segundo principio: Los objetos bajo cada nivel en ambos sentidos deben ser idénticos</li>
+    </ul>
+    <img src="assets/tema2/Foto1.PNG" style="height: 400px;">
+    <h3>2.2 Conjunto de protocolos TCP/IP</h3>
+    <div>Descripción de protocolos de red que se usa actualmente</div>
+    <h4>2.2.1 Arquitectura de niveles</h4>
+    <img src="assets/tema2/Foto2.jpeg" style="height: 400px;">
+    <h4>2.2.2 Niveles en el conjunto de protocolos TCP/IP</h4>
+    <ol>
+        <li>
+            <b>Nivel Físico:</b> Es responsable de transportar los bits individuales a través del enlace, la comunicación entre dos dispositivos es lógica. Los bits transportados 
+            son transformados a señales eléctricas u ópticas y enviados a través de los medios de transmisión (cable/aire)
+        </li>
+        <li>
+            <b>Nivel de enlace de datos:</b> Puede haber varios conjuntos de de enlaces que se superpongan y que un datagrama pueda recorrer, los enrutadores son los responsables 
+            de elegir los mejores enlaces
+        </li>
+        <li>
+            <b>Nivel de red</b> Es el responsable de crear una conexión entre el ordenador de origen y el de destino, la comunicación en este nivel es deispositivo a dispositivo. 
+            Incluye el protocolo principal, el protocolo de internet (IP), que define el formato del paquete y de las direcciones utilizadas en este nivel.
+            <br>
+            El protocolo IP no proporciona ningún control de flujo, errores o gestión.
+        </li>
+        <li>
+            <b>Nivel de transporte</b> El nivel de transporte en el host de origen recibe el mensaje de la capa de aplicación, lo encapsula en un paquete de nivel de transporte 
+            y lo envía al nivel de transporte en el host de destino. El nivel de transporte es responsable de dar servicios al nivel de aplicación. El principal es TCP
+            <br>
+            El protocolo TCP proporciona control de flujo, de errores y de congestión. Otro protocolo famoso es el UDP, es como el TCP pero sin crear al principio una conexión lógica.
+        </li>
+        <li>
+            <b>Nivel de aplicación</b> Los niveles de aplicación de los dos extremos intercambian mensajes entre sí pasando antes por el resto de niveles.
+            <br>
+            La comunicación en el nivel de aplicación es entre procesos, un proceso envía una solicitud al otro y recibe una respuesta. Los protocolos más famosos son HTTP, 
+            SMTP, FTP, SSH...
+        </li>
+    </ol>
+</div>
