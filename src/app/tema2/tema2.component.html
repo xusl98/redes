@@ -22,22 +22,61 @@
             de elegir los mejores enlaces
         </li>
         <li>
-            <b>Nivel de red</b> Es el responsable de crear una conexión entre el ordenador de origen y el de destino, la comunicación en este nivel es deispositivo a dispositivo. 
+            <b>Nivel de red:</b> Es el responsable de crear una conexión entre el ordenador de origen y el de destino, la comunicación en este nivel es deispositivo a dispositivo. 
             Incluye el protocolo principal, el protocolo de internet (IP), que define el formato del paquete y de las direcciones utilizadas en este nivel.
             <br>
             El protocolo IP no proporciona ningún control de flujo, errores o gestión.
         </li>
         <li>
-            <b>Nivel de transporte</b> El nivel de transporte en el host de origen recibe el mensaje de la capa de aplicación, lo encapsula en un paquete de nivel de transporte 
+            <b>Nivel de transporte:</b> El nivel de transporte en el host de origen recibe el mensaje de la capa de aplicación, lo encapsula en un paquete de nivel de transporte 
             y lo envía al nivel de transporte en el host de destino. El nivel de transporte es responsable de dar servicios al nivel de aplicación. El principal es TCP
             <br>
             El protocolo TCP proporciona control de flujo, de errores y de congestión. Otro protocolo famoso es el UDP, es como el TCP pero sin crear al principio una conexión lógica.
         </li>
         <li>
-            <b>Nivel de aplicación</b> Los niveles de aplicación de los dos extremos intercambian mensajes entre sí pasando antes por el resto de niveles.
+            <b>Nivel de aplicación:</b> Los niveles de aplicación de los dos extremos intercambian mensajes entre sí pasando antes por el resto de niveles.
             <br>
             La comunicación en el nivel de aplicación es entre procesos, un proceso envía una solicitud al otro y recibe una respuesta. Los protocolos más famosos son HTTP, 
             SMTP, FTP, SSH...
         </li>
     </ol>
+    <h4>2.2.3 Encapsulado y desencapsulado</h4>
+    <ul>
+        <li>
+            <b>Encapsulado en el host fuente:</b> En la fuente ssolo tenemos encapsulado.
+            <br>
+            <ol>
+                <li><u>En el nivel de aplicación</u>, los datos que se intercambian se denominan mensaje.</li>
+                <li>
+                    <u>El nivel de transporte</u> toma el mensaje como carga útil y le añade el encabezado del nivel de transporte que contiene los identificadores de lo programas de aplicación 
+                    de origen y destino. El resultado de mensaje + encabezado se llama segmento en TCP y datagrama de usuario en UDP, después de esto se transfiere a nivel de red.
+                </li>
+                <li>
+                    <u>El nivel de red</u> toma el paquete de transporte y le añade un encabezado propio que contiene las direcciones de los host de origen y destino. 
+                    El resultado es el paquete de nivel de red que se transsfiere al nivel de enlace de datos.
+                </li>
+                <li>
+                    <u>El nivel de enlace de datos</u> toma el paquete del nivel de red y añade su propio encabezado, que contiene las direcciones del nivel de enlace 
+                    del host o del siguiente salto(enrutador). El resultado es el paquete de nivel de enlace, que se denomina trama. La trama se envía al nivel físico.
+                </li>
+            </ol>
+        </li>
+        <li>
+            <b>Desencapsulado y encapsulado en el enrutador:</b> En esta parte hay tanto encapsulado como desencapsulado ya que el enrutador conecta a dos o más enlaces.
+            <ol>
+                <li>Tras recibir el conjunto de bits en el nivel de enlace de datos, este nivel desencapsula el datagrama de la trama y lo pasa a nivel de red</li>
+                <li>
+                    El nivel de red solo inspecciona las direcciones de origen y destino en el encabezado del datagrama su consulta su tabla de reenvío para 
+                    encontrar el siguiente salto al que debe entregar dicho datagrama. El datagrama se pasa entonces al nivel de enlace de datos del siguiente enlace.
+                </li>
+                <li>El nivel de enlace de datos del siguiente enlace encapsula el datagrama en una trama y lo pasa al nivel físico para su transmisión.</li>
+            </ol>
+        </li>
+        <li>
+            <b>Desencapsulado en el host de destino:</b> En el host de destino, cada nivel desencapsula el paquete recibido, coge la carga útil y la transmite al nivel superior 
+            hasta que el mensaje llega a la capa de aplicación (Implica comprobación de errores).
+        </li>
+    </ul>
+    <h4>2.2.4 Direccionamiento</h4>
+    <img src="assets/tema2/Foto3.jpeg" style="height: 400px;">
 </div>
