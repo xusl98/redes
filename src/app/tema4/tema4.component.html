@@ -1,1 +1,180 @@
-<p>tema4 works!</p>
+<div class="container-fluid">
+    <h2>Tema 4 - Transmisión digital</h2>
+    <h3>4.1 Conversión Digital a Digital</h3>
+    <h4>4.1.1 Codificación de línea</h4>
+    <div>
+        Proceso de convertir datos digitales en señales digitales. Los datos de texto, números, imágenes audio o voz se
+        almacenan en la memoria del ordenador en secuencias
+        de bits. La codificación de línea convierte una secuencia de bits en una señal digital. En el emisor los datos
+        se
+        codifican y en el recepetor se decodifican.
+        <br>Características:
+    </div>
+    <ul>
+        <li>
+            <b>Elemento de señal frente a elemento de datos:</b> Un elemento de datos es la entidad más pequeña ¡, que
+            puede representar una pieza de información, el bit. Un
+            elemento de señal lleva elementos de datos y es la señal más corta de una señal digital.<br> Elementos de
+            datos: lo que necesitamos enviar. <br>
+            Elementos de señal: lo que podemos enviar.
+        </li>
+        <li>
+            <b>Tasa de datos frente a tasa de señales:</b> La <u>tasa de datos</u> define el número de elementos de
+            datos (bits) enviados en 1 segundo (bps).
+            La <u>tasa ded señales</u> es el número de elementos de señal enviados en 1 segundo (la unidad es el
+            baudio).<br>
+            La tasa de datos se puede <u>llamar tasa de bits</u> y la tasa de señales se conoce también como <u>tasa de
+                pulsos</u>, <u>tasa de modulación</u> o
+            <u>tasa de baudios</u>.<br>
+            El objetivo es aumentar la tasa de datos mientras se reduce la de señales (Aumentar velocidad de transmisión
+            y reducir ancho de banda requerido).
+            <br>
+            <br>
+            Práctica:
+            <br>
+            <img src="assets/tema4/Foto1.jpeg" style="height: 400px;">
+        </li>
+        <li>
+            <b>Ancho de banda:</b> Aunque el ancho de banda real de una señal digital es infinito, el ancho de banda
+            efectivo es finito. Se puede decir que la tasa de baudios
+            determina el ancho de banda requerido para una señal digital.
+            <br>
+            <br>
+            Práctica:
+            <br>
+            <img src="assets/tema4/Foto2.jpeg" style="height: 400px;">
+        </li>
+        <li>
+            <b>Componentes DC y Autosincronización y Variaciones de Línea Base</b>
+            <br>
+            <img src="assets/tema4/Foto3.jpeg" style="height: 400px;">
+            <br>
+            En una transmisión digital el reloj del receptor es 0.1% más rápido que el del emisor.
+        </li>
+        <li><b>Detección de errores incorporada</b></li>
+        <li><b>Inmunidad al ruido y las interferencias</b></li>
+        <li><b>Complejidad</b></li>
+    </ul>
+    <h4>4.1.2 Esquemas de codificación en línea</h4>
+    pag 101
+    <b>NRZ, NRZ-L, NRZ-I, RZ Polar, Manchester y diferencial (bifásica), Bipolar(AMI), Multinivel(2B1Q, 8B6T, 4D-PAM5) y
+        multitransición(MLT-3)</b>
+    <br>
+    <img src="assets/tema4/Foto4.jpeg" style="height: 400px;">
+    <br>
+    <img src="assets/tema4/Foto5.jpeg" style="height: 400px;">
+    <br>
+    <img src="assets/tema4/Foto6.jpeg" style="height: 400px;">
+    <br>
+    <img src="assets/tema4/Foto7.jpeg" style="height: 400px;">
+    <br>
+    <img src="assets/tema4/Foto8.jpeg" style="height: 400px;">
+    <br>
+    <h4>4.1.3 Codificación de bloques</h4>
+    <div>
+        Ofrece redundancia, cambia un bloque de m en un bloque de n bits, donde n es mayor que m (mB/nB).
+        <ul>
+            <li><b>4B/5B</b></li>
+            <li><b>8B/10B</b></li>
+        </ul>
+    </div>
+    <h4>4.1.4 Aleatorización</h4>
+    <div>Una larga secuencia de 0 provoca problemas de sincronización, una solución es la aleatorización.</div>
+    <ul>
+        <li>
+            <b>B8ZS:</b> Bipolarización con sustitución de 8 ceros, se suele usar en norteamérica. Ocho voltajes a nivel
+            cero se sustituyen por 000VB0VB.
+        </li>
+        <li>
+            <b>HDB3:</b> Bipolar de alta densidad con 3 ceros, se suele usar fuera de norteamérica. Cuatro voltajes a
+            nivel cero se sustituyen por 000V o B00V.
+        </li>
+    </ul>
+    <h3>4.2 Conversión Analógica a Digital</h3>
+    <h4>4.2.1 Modulación por codificación de pulsos (PCM)</h4>
+    <div>
+        Es la técnica más habitual, tiene 3 procesos:
+    </div>
+    <ul>
+        <li>
+            <b>Muestreo:</b> La señal analógica es muestreada cada Ts donde Ts es el intervalo de muestreo o periodo. El
+            inverso del intervalo de muestreo se denomina
+            tasa de muestreo. El método de muestreo más común es el muestreo de cresta plana (de muestreo y retención).
+            El muestreo también es conocido como
+            <u>modulación por amplitud de pulsos (PAM)</u>.
+            <br>
+            Según el teorema de Nyquist, la tasa de muestreo debe ser al menos dos veces la frecuencia más alta
+            contenida en la señal. <br>pag116
+        </li>
+        <li>
+            <b>Cuantificación: </b>El resultado del muestreo es una serie de pulsos con valores de amplitud comprendidos
+            entre la mínima y la máxima amplitud de la señal,
+            etapas de la cuantificación:
+            <ol>
+                <li>Se asume que la señal analógica tiene amplitudes instantáneas entre Vmin y Vmax</li>
+                <li>Se divide el rango en L zonas, cada una de ancho delta => delta = (Vmax - 2Vmin) / L</li>
+                <li>Se asignan valores cuantificados de 0 a L - 1 en el punto medio de cada zona</li>
+                <li>Se aproxima el valor de la amplitud de la muestra a los valores cuantificados</li>
+            </ol>
+        </li>
+        <!-- TODO práctica -->
+    </ul>
+    <h4>4.2.2 Modulación Delta (DM)</h4>
+    <div>
+        Es la técnica de modulación más simple. PCM encuentra el valor de la amplitud de la señal de cada muestra, DM
+        encuentra el cambio respecto a la muestra anterior.
+        <b>Modulador</b>
+        <div>
+            Se utiliza un modulador en el emisor para crear un flujo de bits a partir de la señal analógica. El proceso
+            registra los cambios, que son denominados deltas.
+        </div>
+        <b>Demodulador</b>
+        <div>
+            Toma la señal de datos, y utilizando un constructor de señal de escaler y la unidad de retardo, crea la
+            señal analógica.
+        </div>
+        <b>DM Adaptativa</b>
+        <div>
+            Se obtienen mejores prestaciones si el valor de delta no es fijo. En este tipo el valor de delta cambia de
+            acuerdo a la amplitud de la señal analógica.
+        </div>
+        <b>Error de cuantificación</b>
+        <div>
+            En DM siempre se introduce un error de cuantificación, pero es mucho menor que para PCM.
+        </div>
+    </div>
+    <h3>4.3 Modos de Transmisión</h3>
+    <h4>4.3.1 Transmisión paralela</h4>
+    <div>
+        Se envían n bits agrupados al mismo tiempo en lugar de uno solo. Se usan n hilos para enviar n bits cada vez, de esta forma cada bit tiene su propio hilo y 
+        todos los n bits de un grupo se pueden transmitir en un solo pulso de reloj.
+        <br>
+        La ventaja de este tipo de transmisión es la velocidad, pero se encarece bastante por lo tanto se usa habitualmente para distancias cortas.
+    </div>
+    <h4>4.3.2 Transmisión en serie</h4>
+    <div>
+        Un bit sigue a otro por lo que solo se necesita un canal de comunicación.
+        <br>
+        La ventaja de esta forma es que al tener un solo canal de comunicación se reduce el coste aproximadamente en n.
+        <br>
+        La transmisión en serie puede llevarse a cabo de tres maneras.
+        <ol>
+            <li>
+                <b>Transmisión asíncrona:</b> Se denomina así debido a que la temporización de la señal no es importante.
+                <br>
+                Para avisar al receptor de la llegada de un nuevo grupo se añade un bit extra al principio de cada byte, sule ser 0 y se denomina <u>bit de inicio</u>. Para 
+                permitir al recepetor saber que el byte ha terminado se añaden uno o varios bits adicionales al final de cada byte, se llaman <u>bits de parada</u>.
+                <br>
+                Puede haber un intervalo entre cada byte.
+                <br>
+                Asíncrono aquí significa a nivel de byte, pero los bits siguen sincronizados, su duración es la misma.
+            </li>
+            <li>
+                <b>Transmisión síncrona:</b> Se envía un bit detrás de otro, sin bits de inicio/parada o intervalos. Es responsabilidad del receptor agrupar los bits.
+            </li>
+            <li>
+                <b>Isócrona:</b> Garantiza que los datos lleguen a una tasa fija, por eso se usa para vídeo y audio en tiempo real.
+            </li>
+        </ol>
+    </div>
+</div>

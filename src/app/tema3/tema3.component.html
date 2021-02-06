@@ -1,1 +1,126 @@
-<p>tema3 works!</p>
+<div class="container-fluid">
+    <h2>Tema 3 - Introducción al nivel físico</h2>
+    <h3>3.1 Datos y Señales</h3>
+    <h4>3.1.1 Datos analógicos y digitales</h4>
+    <div>
+        Los datos analógicos se refiere a la información que es continua, los digitales se refieren a la información que
+        tiene estados discretos.
+        Un reloj analógico tiene una manecilla moviéndose de forma continua, mientras que en uno digital, los valores
+        cambian repentinamente.
+    </div>
+    <h4>3.1.2 Señales analógicas y digitales</h4>
+    <div>
+        Una señal analógica tiene infinitos valores de intensidad durante un periodo de tiempo. Una señal digital, en
+        cambio, solo puede tener un número limitado de valores definidos.
+    </div>
+    <h4>3.1.3 Periódica y no periódica</h4>
+    <div>
+        Es una característica tanto de las señales digitales como de las analógicas.
+        <br>
+        Una señal periódica completa una pauta dentro de un marco temporal mesurable llamado perido. Una señal no
+        periódica cambia sin exhibir patrón alguno.
+    </div>
+    <h3>3.2 Señales Periódicas Analógicas</h3>
+    <div>
+        Se clasifican en simples u ondas seno y en complejas, que están compuestas de múltiples ondas seno.
+    </div>
+    <h4>3.2.1 Ondas seno</h4>
+    <div>
+        Es la forma más fundamental de una señal analógica periódica.
+    </div>
+    <ul>
+        <li>
+            <b>Amplitud pico: </b> es el valor absoluto de su mayor intensidad, proporcional a la energía que
+            transporta.
+            <br>
+            <img src="assets/tema3/Foto1.jpeg" style="height: 400px;">
+        </li>
+        <li>
+            <b>Período y frecuencia:</b>
+            <br>
+            <u>Período:</u> Se refiere a la cantidad de tiempo (en segundos) que una señal necesita para completar 1
+            ciclo.
+            <br>
+            <u>Frecuencia:</u> Se refiere al número de períodos en 1 segundo (se expresa en hz).
+            <br>
+            f=1/t => t=1/f
+        </li>
+    </ul>
+    <h4>3.2.2 Fase</h4>
+    <div>
+        Describe la posición de la forma de onda en relación con el tiempo 0.
+    </div>
+    <h4>3.2.3 Longitud de onda</h4>
+    <div>
+        La longitud de onda vincula el perido o la frecuencia a la velocidad de propagación del medio. longitud de onda
+        (lambda) = velocidad de propagación (c) * periodo (T)
+    </div>
+    <h4>3.2.4 Dominios del tiempo y la frecuencia</h4>
+    <img src="assets/tema3/Foto2.jpeg" style="height: 400px;">
+    <h4>3.2.5 Señales compuestas</h4>
+    <div>
+        Una señal compuesta está formada de muchas ondas seno simples. Es necesaria para comunicar datos.
+    </div>
+    <h4>3.2.6 Ancho de banda</h4>
+    <div>
+        Es el rango de frecuencias que contiene una señal compuesta, suele ser una diferencia entre dos números (ej.
+        5000 - 1000 o 4000).
+    </div>
+    <h3>3.3 Señales Digitales</h3>
+    <h4>3.3.1 Tasa de bits</h4>
+    <div>
+        La mayoría de las señales digitales no son periódicas, por lo tanto el periodo y la frecuencia no son
+        características apropiadas. La tasa de bits es el número de
+        bits enviados en 1 segundo (expresado en bits por segundo bps).
+    </div>
+    <h4>3.3.2 Intervalo de bit</h4>
+    <div>Es la distancia que ocupa un bit en el medio de propagación. Intervalo de propagación = velocidad de
+        propagación * duración del bit</div>
+    <h4>3.3.3 La señal digital como señal analógica compuesta</h4>
+    <div>Basándose en el análisis de Fourier, una señal digital es una señal analógica compuesta por un ancho de banda
+        infinito.</div>
+    <h4>3.3.4 Transmisión de señales digitales</h4>
+    <div>
+        Se puede transmitir de dos formas:
+        <br>
+        <b>Transmisión en banda base:</b> Consiste en enviar una señal digital por un canal sin cambiar la señal digital
+        a una analógica.
+        <ol>
+            <li>
+                <u>Canal paso-baja con ancho de banda amplio:</u> Conserva la señal digital.
+            </li>
+            <li>
+                <u>Canal paso-baja con ancho de banda limitado:</u> La señal digital se aproxima a una analógica
+            </li>
+        </ol>
+        <b>Transmisión en banda ancha</b> (usando modulación): Implica cambiar la señal digital a una señal analógica
+        para su transmisión. Está más disponible que un
+        canal paso-baja.
+    </div>
+    <h3>3.4 Deterioro de la Transmisión</h3>
+    <h4>3.4.1 Atenuación</h4>
+    <div>
+        Significa la pérdida de energía, cuando una señal viaja a través de un medio de transmisión, pierde algo de su
+        energía para vencer la resistencia del medio.
+        <br>
+        Para indicar que una señal ha perdido o ganado potencia, se usa el concepto de <b>decibelio</b>, que mide las
+        potencias relativas de dos señales o de una señal
+        en dos puntos diferentes.
+    </div>
+    <h4>3.4.2 Distorsión</h4>
+    <div>
+        Significa que la señal cambia su forma de onda, ocurre en señales compuestas que están formadas por distintas
+        frecuencias. Cada señal componente tiene su propia
+        velocidad de propagación y, por lo tanto, su propio retraso en la llegada al destino.
+    </div>
+    <h4>3.4.3 Ruido</h4>
+    <ul>
+        <li>Ruido térmico</li>
+        <li>Ruido inducido</li>
+        <li>Ruido impulso</li>
+    </ul>
+    <div>
+        <b>Relación señal ruido</b>
+        SNR = potencia media de la señal / potencia media del ruido
+    </div>
+</div>
