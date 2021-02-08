@@ -1,64 +1,68 @@
-<h1>Redes</h1>
-<p>
-  <button class="btn btn-primary x" type="button" class="btn btn-outline-primary" (click)="collapse.toggle()" [attr.aria-expanded]="!isCollapsed"
-    aria-controls="collapseExample">
-    Índice
-  </button>
-</p>
-<div #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed">
-  <div class="card">
-    <div class="card-body">
-      <button class="btn btn-primary x" disabled>Parte I - Descripción general</button>
-      <button class="btn btn-secondary x" disabled>Parte II - Nivel físico</button>
-      <button class="btn btn-success x" disabled>Parte III - Nivel de enlace</button>
-      <button class="btn btn-danger x" disabled>Parte IV - Nivel de red</button>
-      <button class="btn btn-warning x" disabled>Parte V - Nivel de transporte</button>
-      <button class="btn btn-info x" disabled>Parte VI - Nivel de aplicación</button>
-      <br>
-      <br>
-      <button class="btn btn-primary x" (click)="select('tema1')">Tema 1</button>
-      <button class="btn btn-primary x" (click)="select('tema2')">Tema 2</button>
-      <button class="btn btn-secondary x" (click)="select('tema3')">Tema 3</button>
-      <button class="btn btn-secondary x" (click)="select('tema4')">Tema 4</button>
-      <button class="btn btn-secondary x" (click)="select('tema5')">Tema 5</button>
-      <button class="btn btn-secondary x" (click)="select('tema6')">Tema 6</button>
-      <button class="btn btn-success x" (click)="select('tema7')">Tema 7</button>
-      <button class="btn btn-success x" (click)="select('tema8')">Tema 8</button>
-      <button class="btn btn-success x" (click)="select('tema9')">Tema 9</button>
-      <button class="btn btn-success x" (click)="select('tema10')">Tema 10</button>
-      <button class="btn btn-success x" (click)="select('tema11')">Tema 11</button>
-      <button class="btn btn-success x" (click)="select('tema12')">Tema 12</button>
-      <button class="btn btn-danger x" (click)="select('tema13')">Tema 13</button>
-      <button class="btn btn-danger x" (click)="select('tema14')">Tema 14</button>
-      <button class="btn btn-danger x" (click)="select('tema15')">Tema 15</button>
-      <button class="btn btn-warning x" (click)="select('tema16')">Tema 16</button>
-      <button class="btn btn-warning x" (click)="select('tema17')">Tema 17</button>
-      <button class="btn btn-info x" (click)="select('tema18')">Tema 18</button>
-      <button class="btn btn-info x" (click)="select('tema19')">Tema 19</button>
-      <button class="btn btn-light x" (click)="select('todostemas')">Todos los temas</button>
-      
+<div class="container-fluid">
+  <div id="header" style="position: fixed; top: 0; z-index: 999; background-color: white; width: 100%;">
+    <h1>Redes</h1>
+    <p>
+      <button class="btn btn-primary x" type="button" class="btn btn-outline-primary" (click)="collapse.toggle()"
+        [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample">
+        Índice
+      </button>
+    </p>
+    <div #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed">
+      <div class="card">
+        <div class="card-body">
+          <button class="btn btn-primary x" disabled>Parte I - Descripción general</button>
+          <button class="btn btn-secondary x" disabled>Parte II - Nivel físico</button>
+          <button class="btn btn-success x" disabled>Parte III - Nivel de enlace</button>
+          <button class="btn btn-danger x" disabled>Parte IV - Nivel de red</button>
+          <button class="btn btn-warning x" disabled>Parte V - Nivel de transporte</button>
+          <button class="btn btn-info x" disabled>Parte VI - Nivel de aplicación</button>
+          <br>
+          <br>
+          <button class="btn btn-primary x" (click)="select('tema1')">Tema 1</button>
+          <button class="btn btn-primary x" (click)="select('tema2')">Tema 2</button>
+          <button class="btn btn-secondary x" (click)="select('tema3')">Tema 3</button>
+          <button class="btn btn-secondary x" (click)="select('tema4')">Tema 4</button>
+          <button class="btn btn-secondary x" (click)="select('tema5')">Tema 5</button>
+          <button class="btn btn-secondary x" (click)="select('tema6')">Tema 6</button>
+          <button class="btn btn-success x" (click)="select('tema7')">Tema 7</button>
+          <button class="btn btn-success x" (click)="select('tema8')">Tema 8</button>
+          <button class="btn btn-success x" (click)="select('tema9')">Tema 9</button>
+          <button class="btn btn-success x" (click)="select('tema10')">Tema 10</button>
+          <button class="btn btn-success x" (click)="select('tema11')">Tema 11</button>
+          <button class="btn btn-success x" (click)="select('tema12')">Tema 12</button>
+          <button class="btn btn-danger x" (click)="select('tema13')">Tema 13</button>
+          <button class="btn btn-danger x" (click)="select('tema14')">Tema 14</button>
+          <button class="btn btn-danger x" (click)="select('tema15')">Tema 15</button>
+          <button class="btn btn-warning x" (click)="select('tema16')">Tema 16</button>
+          <button class="btn btn-warning x" (click)="select('tema17')">Tema 17</button>
+          <button class="btn btn-info x" (click)="select('tema18')">Tema 18</button>
+          <button class="btn btn-info x" (click)="select('tema19')">Tema 19</button>
+          <button class="btn btn-light x" (click)="select('todostemas')">Todos los temas</button>
+        </div>
+      </div>
     </div>
+    <hr *ngIf="isCollapsed">
   </div>
-</div>
-<div>
-  <app-tema1 *ngIf="visible == 'tema1'"></app-tema1>
-  <app-tema2 *ngIf="visible == 'tema2'"></app-tema2>
-  <app-tema3 *ngIf="visible == 'tema3'"></app-tema3>
-  <app-tema4 *ngIf="visible == 'tema4'"></app-tema4>
-  <app-tema5 *ngIf="visible == 'tema5'"></app-tema5>
-  <app-tema6 *ngIf="visible == 'tema6'"></app-tema6>
-  <app-tema7 *ngIf="visible == 'tema7'"></app-tema7>
-  <app-tema8 *ngIf="visible == 'tema8'"></app-tema8>
-  <app-tema9 *ngIf="visible == 'tema9'"></app-tema9>
-  <app-tema10 *ngIf="visible == 'tema10'"></app-tema10>
-  <app-tema11 *ngIf="visible == 'tema11'"></app-tema11>
-  <app-tema12 *ngIf="visible == 'tema12'"></app-tema12>
-  <app-tema13 *ngIf="visible == 'tema13'"></app-tema13>
-  <app-tema14 *ngIf="visible == 'tema14'"></app-tema14>
-  <app-tema15 *ngIf="visible == 'tema15'"></app-tema15>
-  <app-tema16 *ngIf="visible == 'tema16'"></app-tema16>
-  <app-tema17 *ngIf="visible == 'tema17'"></app-tema17>
-  <app-tema18 *ngIf="visible == 'tema18'"></app-tema18>
-  <app-tema19 *ngIf="visible == 'tema19'"></app-tema19>
-  <app-todostemas *ngIf="visible == 'todostemas'"></app-todostemas>
+  <div style="position: absolute; top: 30vh;">
+    <app-tema1 *ngIf="visible == 'tema1'"></app-tema1>
+    <app-tema2 *ngIf="visible == 'tema2'"></app-tema2>
+    <app-tema3 *ngIf="visible == 'tema3'"></app-tema3>
+    <app-tema4 *ngIf="visible == 'tema4'"></app-tema4>
+    <app-tema5 *ngIf="visible == 'tema5'"></app-tema5>
+    <app-tema6 *ngIf="visible == 'tema6'"></app-tema6>
+    <app-tema7 *ngIf="visible == 'tema7'"></app-tema7>
+    <app-tema8 *ngIf="visible == 'tema8'"></app-tema8>
+    <app-tema9 *ngIf="visible == 'tema9'"></app-tema9>
+    <app-tema10 *ngIf="visible == 'tema10'"></app-tema10>
+    <app-tema11 *ngIf="visible == 'tema11'"></app-tema11>
+    <app-tema12 *ngIf="visible == 'tema12'"></app-tema12>
+    <app-tema13 *ngIf="visible == 'tema13'"></app-tema13>
+    <app-tema14 *ngIf="visible == 'tema14'"></app-tema14>
+    <app-tema15 *ngIf="visible == 'tema15'"></app-tema15>
+    <app-tema16 *ngIf="visible == 'tema16'"></app-tema16>
+    <app-tema17 *ngIf="visible == 'tema17'"></app-tema17>
+    <app-tema18 *ngIf="visible == 'tema18'"></app-tema18>
+    <app-tema19 *ngIf="visible == 'tema19'"></app-tema19>
+    <app-todostemas *ngIf="visible == 'todostemas'"></app-todostemas>
+  </div>
 </div>
